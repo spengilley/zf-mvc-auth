@@ -26,7 +26,6 @@ abstract class AbstractAdapter implements AdapterInterface
      */
     public function getTypeFromRequest(Request $request)
     {
-        $headers = $request->getHeaders();
         $authorization = $request->getHeader('Authorization');
         if (! $authorization) {
             return false;
